@@ -1,8 +1,12 @@
-fastapi
-uvicorn
-supabase
-asyncpg
-pymupdf
-easyocr
-pytest
-fitz
+# ——— Core runtime ———
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+supabase>=2.4.2
+# asyncpg==0.30.0       # DB bulk-insert
+pymupdf==1.25.5         # fast text extraction from PDFs  (import fitz)
+easyocr==1.7.1          # OCR fallback for scanned images
+httpx<0.27              # async HTTP client for Supabase
+
+
+# ——— Test / dev ———
+pytest==8.2.0
